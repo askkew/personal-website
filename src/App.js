@@ -16,14 +16,6 @@ const originalColors = [
   'yellow',
 ];
 
-// const customColors = [
-//   darkText: '#22223B'
-//   lightText: '#4A4E69',
-//   darkBackground: '#9A8C98',
-//   middleBackground: '#C9ADA7',
-//   lightBackground: '#F2E9E4',
-// ]
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -35,10 +27,10 @@ class App extends React.Component {
           description: 'Full Stack Developer',
         },
         {
-          text: 'Section 2',
+          text: 'Experience/Work',
         },
         {
-          text: 'Section 3',
+          text: 'Contact me',
         },
       ],
     };

@@ -1,21 +1,22 @@
 import React from 'react'
-import { Navmenucontainer, Navmenuitem } from "./navmenustyles.jsx"
+import { Navmenucontainer, Navmenuitem, Socialicon } from "./navmenustyles.jsx"
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { darkText } from '../utils/index.jsx';
 
 const Navmenu = () => {
 
   return (
     <Navmenucontainer>
-      <li style={{listStyle: 'none'}} data-menuanchor="firstPage" class="active"><Navmenuitem href="#firstPage">First section</Navmenuitem></li>
-      <li style={{listStyle: 'none'}} data-menuanchor="secondPage"><Navmenuitem href="#secondPage">Second section</Navmenuitem></li>
-      <li style={{listStyle: 'none'}} data-menuanchor="thirdPage"><Navmenuitem href="#thirdPage">Third section</Navmenuitem></li>
-      <a style={{color: '#fff'}} href="https://github.com/askkew">
+      <li style={{listStyle: 'none'}} data-menuanchor="firstPage" class="active"><Navmenuitem href="#firstPage">about</Navmenuitem></li>
+      <li style={{listStyle: 'none'}} data-menuanchor="secondPage"><Navmenuitem href="#secondPage">work</Navmenuitem></li>
+      <li style={{listStyle: 'none'}} data-menuanchor="thirdPage"><Navmenuitem href="#thirdPage">contact</Navmenuitem></li>
+      <Socialicon href="https://github.com/askkew">
         <GitHubIcon />
-      </a>
-      <a style={{color: '#fff'}} href="https://www.linkedin.com/in/luke-overbey-37b342235/">
+      </Socialicon>
+      <Socialicon href="https://www.linkedin.com/in/luke-overbey-37b342235/">
         <LinkedInIcon />
-      </a>
+      </Socialicon>
     </Navmenucontainer>
   )
 }

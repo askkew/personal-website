@@ -11,6 +11,16 @@ export const Navmenucontainer = styled('div')({
   gap: '2em',
   marginRight: '2em',
   marginLeft: '2em',
+  '@media (max-width: 768px)': {
+    right: '50%',
+    transform: 'translateX(50%)',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    margin: 0,
+  },
+  '@media (max-width: 368px)': {
+    gap: '0.75em',
+  },
 })
 
 export const Navmenuitem = styled('a')({
@@ -48,5 +58,12 @@ export const Navmenuitem = styled('a')({
   },
   '&:hover::before, &:hover::after, &.active::before, &.active::after': {
     transform: 'scaleX(1)',
+  },
+})
+
+export const Socialicon = styled('a')({
+  color: '#fff',
+  '@media (max-width: 768px)': {
+    display: 'none',
   },
 })
