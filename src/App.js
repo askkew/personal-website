@@ -57,24 +57,9 @@ class App extends React.Component {
       return null;
     }
 
-    const Menu = () => (
-      <div
-        className="menu"
-        style={{
-          position: 'fixed',
-          top: 0,
-          zIndex: 100,
-        }}
-      >
-        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
-        <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
-      </div>
-    );
-
     return (
       <>
-        <Menu />
+        <Navmenu />
         <ReactFullpage
           debug /* Debug logging */
           // Required when using extensions

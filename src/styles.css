@@ -54,3 +54,41 @@ button {
   background: #fff;
   color: #35495e;
 }
+
+#custombutton {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+#custombutton {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+}
+#custombutton::before,
+#custombutton::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #eaeaea;
+	transform: scaleX(0);
+	transition: transform 0.25s;
+}
+#custombutton::before {
+	top: -3px;
+	transform-origin: left;
+}
+#custombutton::after {
+	bottom: -3px;
+	transform-origin: right;
+}
+#custombutton:hover::before,
+#custombutton:hover::after,
+.active::before,
+.active::after {
+	transform: scaleX(1);
+}

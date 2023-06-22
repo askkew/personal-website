@@ -1,13 +1,21 @@
 import React from 'react'
-import { Navmenucontainer } from "./navmenustyles.jsx"
+import { Navmenucontainer, Navmenuitem } from "./navmenustyles.jsx"
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const Navmenu = ({ scrollToSection }) => {
+const Navmenu = () => {
 
   return (
     <Navmenucontainer>
-      <button onClick={() => scrollToSection(0)}>Section 1</button>
-      <button onClick={() => scrollToSection(1)}>Section 2</button>
-      <button onClick={() => scrollToSection(2)}>Section 3</button>
+      <li style={{listStyle: 'none'}} data-menuanchor="firstPage" class="active"><Navmenuitem href="#firstPage">First section</Navmenuitem></li>
+      <li style={{listStyle: 'none'}} data-menuanchor="secondPage"><Navmenuitem href="#secondPage">Second section</Navmenuitem></li>
+      <li style={{listStyle: 'none'}} data-menuanchor="thirdPage"><Navmenuitem href="#thirdPage">Third section</Navmenuitem></li>
+      <a style={{color: '#fff'}} href="https://github.com/askkew">
+        <GitHubIcon />
+      </a>
+      <a style={{color: '#fff'}} href="https://www.linkedin.com/in/luke-overbey-37b342235/">
+        <LinkedInIcon />
+      </a>
     </Navmenucontainer>
   )
 }
