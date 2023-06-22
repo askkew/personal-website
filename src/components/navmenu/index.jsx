@@ -12,10 +12,10 @@ const Navmenu = () => {
       <li style={{listStyle: 'none'}} data-menuanchor="secondPage"><Navmenuitem href="#secondPage">work</Navmenuitem></li>
       <li style={{listStyle: 'none'}} data-menuanchor="thirdPage"><Navmenuitem href="#thirdPage">contact</Navmenuitem></li>
       <Socialicon href="https://github.com/askkew">
-        <GitHubIcon />
+        <GitHubIcon style={{fontSize: '1.8rem'}} />
       </Socialicon>
       <Socialicon href="https://www.linkedin.com/in/luke-overbey-37b342235/">
-        <LinkedInIcon />
+        <LinkedInIcon style={{fontSize: '1.8rem'}} />
       </Socialicon>
     </Navmenucontainer>
   )

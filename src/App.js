@@ -71,13 +71,28 @@ class App extends React.Component {
             <ReactFullpage.Wrapper>
               {fullpages.map(({ text, description }, index) => (
                 <div key={text} className={SEL}>
-                  <div className="slide">
-                    <h3>{text}</h3>
-                    {description && <h4>{description}</h4>}
-                  </div>
-                  {index === 1 && (
+                  {index === 1 ? (
+                    <>
+                      <div className="slide">
+                        <h3>{text}</h3>
+                      </div>
+                      <div className="slide">
+                        <h3>2{text}</h3>
+                      </div>
+                      <div className="slide">
+                        <h3>3{text}</h3>
+                      </div>
+                      <div className="slide">
+                        <h3>4{text}</h3>
+                      </div>
+                      <div className="slide">
+                        <h3>5{text}</h3>
+                      </div>
+                    </>
+                  ) : (
                     <div className="slide">
                       <h3>{text}</h3>
+                      {description && <h4>{description}</h4>}
                     </div>
                   )}
                 </div>
