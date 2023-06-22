@@ -4,7 +4,9 @@ import './styles.css';
 import Navmenu from './components/navmenu';
 import Projectcard from './components/projectcard';
 import { projectData } from './components/utils';
+import Scrolldownarrow from './components/scrolldownarrow';
 import styled from '@emotion/styled';
+import Contactcard from './components/contactcard';
 
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
@@ -12,8 +14,8 @@ const SECTION_SEL = `.${SEL}`;
 const originalColors = [
   '#C9ADA7',
   '#9A8C98',
-  '#F2E9E4',
   '#435b71',
+  '#F2E9E4',
   'orange',
   'blue',
   'purple',
@@ -49,8 +51,6 @@ class App extends React.Component {
 
   onLeave(origin, destination, direction) {
     console.log('onLeave', { origin, destination, direction });
-    // arguments are mapped in order of fullpage.js callback arguments do something
-    // with the event
   }
 
   render() {
@@ -64,15 +64,10 @@ class App extends React.Component {
       <>
         <Navmenu />
         <ReactFullpage
-          debug /* Debug logging */
-          // Required when using extensions
+          debug
           pluginWrapper={() => {
-            /*
-             * require('./fullpage.fadingEffect.min'); // Optional. Required when using the "fadingEffect" extension.
-             */
           }}
-          // fullpage options
-          licenseKey={'YOUR_KEY_HERE'} // Get one from https://alvarotrigo.com/fullPage/pricing/
+          licenseKey={'YOUR_KEY_HERE'}
           navigation
           anchors={['firstPage', 'secondPage', 'thirdPage']}
           sectionSelector={SECTION_SEL}
@@ -87,30 +82,18 @@ class App extends React.Component {
                       {projectData.map((project) => (
                         <Projectcontainer className="slide">
                           <Projectcard project={project} />
-                          {/* <h3>{text}</h3> */}
                         </Projectcontainer>
                       ))}
-                      {/* <div className="slide">
-                        <Projectcard />
-                        <h3>{text}</h3>
-                      </div>
-                      <div className="slide">
-                        <h3>2{text}</h3>
-                      </div>
-                      <div className="slide">
-                        <h3>3{text}</h3>
-                      </div>
-                      <div className="slide">
-                        <h3>4{text}</h3>
-                      </div>
-                      <div className="slide">
-                        <h3>5{text}</h3>
-                      </div> */}
                     </>
+                  ) : index === 2 ? (
+                    <Projectcontainer className="slide">
+                      <Contactcard />
+                    </Projectcontainer>
                   ) : (
                     <div className="slide">
                       <h3>{text}</h3>
                       {description && <h4>{description}</h4>}
+                      <Scrolldownarrow />
                     </div>
                   )}
                 </div>
