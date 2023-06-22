@@ -17,7 +17,7 @@ export const Customtextfield = styled(TextField)({
   backgroundColor: 'gainsboro',
 })
 
-export const StyledFormControl = styled(FormControl)({
+export const StyledFormControl = styled('form')({
   width: '100%',
   display: 'flex',
   flexDirection: 'column',

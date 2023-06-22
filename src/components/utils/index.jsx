@@ -4,6 +4,7 @@ import portfoliopicture from "./assets/techlitenew.png"
 import tdscpicture from "./assets/tdscnew.png"
 import medpluspicture from "./assets/medplusnew.png"
 import techlitepicture from "./assets/techlitenew.png"
+import monicapicture from './assets/monicafinal.png'
 
 export const darkText = '#22223B'
 export const lightText = '#4A4E69'
@@ -41,11 +42,11 @@ export const projectData = [
     ],
   },
   {
-    title: "Monica Medellin Art",
+    title: "Monica Medellin Art - WIP",
     description: "Silver Armory is a website built to allow Destiny 2 users to view the inventories of other users' Guardians from a database used by over a million players daily.",
-    githublink: "https://github.com/askkew/Silver-Armory",
+    githublink: "https://github.com/askkew/monica-site",
     link: "https://monica-medellin-art.netlify.app/",
-    image: silverpicture,
+    image: monicapicture,
     imagesize: 200,
     tags: [
       {
@@ -63,7 +64,7 @@ export const projectData = [
     ],
   },
   {
-    title: "D2items",
+    title: "D2items - WIP",
     description: "D2items is an item search app for the game Destiny 2 that allows users to search for items, weapons, and armor in the game.",
     githublink: "https://github.com/askkew/destiny-search-engine",
     link: "https://github.com/askkew/destiny-search-engine",
@@ -89,7 +90,7 @@ export const projectData = [
     ],
   },
   {
-    title: "TDSC",
+    title: "TDSC - WIP",
     description: "TDSC is a shooting club operated out of Houston Texas that brings together gun enthusiasts for self defense classes and range days.",
     githublink: "https://github.com/snyperifle/TDSC",
     link: "https://tdscbeta.netlify.app/",
@@ -110,7 +111,7 @@ export const projectData = [
     ],
   },
   {
-    title: "MedPLUS",
+    title: "MedPLUS - WIP",
     description: "MedPLUS specializes in providing innovative and comprehensive medical professional liability insurance products through financially secure, A.M. Best Rated insurance carriers.",
     githublink: "https://github.com/snyperifle/medPlus",
     link: "https://snyperifle.github.io/medPlus/",

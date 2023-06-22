@@ -3,6 +3,11 @@ import { Contactcardcontainer, Customtextfield, StyledFormControl, StyledButton 
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 import { createTheme, ThemeProvider, Theme, useTheme } from '@mui/material/styles';
 import { lightText } from '../utils/index.jsx';
+import emailjs from "@emailjs/browser";
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
+import { useRef } from "react";
+
 
 const customTheme = (outerTheme) =>
   createTheme({
@@ -42,9 +47,69 @@ const customTheme = (outerTheme) =>
 
 const Contactcard = () => {
   const outerTheme = useTheme();
+  const service = process.env.REACT_APP_SERVICE_ID;
+  const template = process.env.REACT_APP_TEMPLATE_ID;
+  const user = process.env.REACT_APP_USER_ID;
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log({service, template, user})
+    if (form.current) {
+      emailjs
+        .sendForm(
+          service || "",
+          template || "",
+          form.current,
+          user
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            console.log("message sent");
+            toast.success('Message Sent Successfully!', {
+              position: "top-left",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              });
+          },
+          (error) => {
+            console.log(error.text);
+            toast.error('Error!', {
+              position: "top-left",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              });
+          }
+        );
+    } else {
+      console.log("Form is not defined");
+      toast.error('Error!', {
+        position: "top-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+    }
+  };
+
   return (
     <Contactcardcontainer>
-      <StyledFormControl>
+      <StyledFormControl ref={form}>
         <h3 style={{fontSize: '3em', margin: 0, color: lightText}}>Contact me!</h3>
         <ThemeProvider theme={customTheme(outerTheme)}>
           <Customtextfield variant="filled" id="mui-theme-provider-filled-input" label="Name" />
@@ -57,7 +122,7 @@ const Contactcard = () => {
             rows={7}
             style={{width: '70%', backgroundColor: 'gainsboro'}}
           />
-          <StyledButton>Send</StyledButton>
+          <StyledButton onClick={sendEmail}>Send</StyledButton>
         </ThemeProvider>
       </StyledFormControl>
     </Contactcardcontainer>

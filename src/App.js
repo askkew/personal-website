@@ -7,6 +7,7 @@ import { projectData } from './components/utils';
 import Scrolldownarrow from './components/scrolldownarrow';
 import styled from '@emotion/styled';
 import Contactcard from './components/contactcard';
+import { ToastContainer } from 'react-toastify';
 
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
@@ -62,6 +63,7 @@ class App extends React.Component {
 
     return (
       <>
+        <ToastContainer />
         <Navmenu />
         <ReactFullpage
           debug
