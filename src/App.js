@@ -2,19 +2,30 @@ import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import './styles.css';
 import Navmenu from './components/navmenu';
+import Projectcard from './components/projectcard';
+import { projectData } from './components/utils';
+import styled from '@emotion/styled';
+
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
 
 const originalColors = [
   '#C9ADA7',
-  '#F2E9E4',
   '#9A8C98',
+  '#F2E9E4',
   '#435b71',
   'orange',
   'blue',
   'purple',
   'yellow',
 ];
+
+const Projectcontainer = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+})
 
 class App extends React.Component {
   constructor(props) {
@@ -27,7 +38,7 @@ class App extends React.Component {
           description: 'Full Stack Developer',
         },
         {
-          text: 'Experience/Work',
+          text: 'Experience | Work',
         },
         {
           text: 'Contact me',
@@ -73,7 +84,14 @@ class App extends React.Component {
                 <div key={text} className={SEL}>
                   {index === 1 ? (
                     <>
-                      <div className="slide">
+                      {projectData.map((project) => (
+                        <Projectcontainer className="slide">
+                          <Projectcard project={project} />
+                          {/* <h3>{text}</h3> */}
+                        </Projectcontainer>
+                      ))}
+                      {/* <div className="slide">
+                        <Projectcard />
                         <h3>{text}</h3>
                       </div>
                       <div className="slide">
@@ -87,7 +105,7 @@ class App extends React.Component {
                       </div>
                       <div className="slide">
                         <h3>5{text}</h3>
-                      </div>
+                      </div> */}
                     </>
                   ) : (
                     <div className="slide">
