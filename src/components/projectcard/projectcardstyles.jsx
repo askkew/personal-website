@@ -35,6 +35,7 @@ export const Projectcardimageconatiner = styled('div')({
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
+  overflow: 'hidden',
 })
 
 export const Projectimagewrapper = styled('div')({
@@ -45,7 +46,7 @@ export const Projectimagewrapper = styled('div')({
   '& img': {
     width: '100%',
     height: '100%',
-    // objectFit: 'cover',
+    objectFit: 'cover',
   }
 })
 

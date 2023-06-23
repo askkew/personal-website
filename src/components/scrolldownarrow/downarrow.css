@@ -1,5 +1,9 @@
 #downarrow{
   left: 49%;
+  /* media query for small screen */
+  @media (max-width: 368px) {
+    left: 45%;
+  }
   transform: translateY(0%) rotate(45deg);
   
                 opacity: 0;
