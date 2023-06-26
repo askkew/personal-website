@@ -63,7 +63,4 @@ export const Navmenuitem = styled('a')({
 
 export const Socialicon = styled('a')({
   color: '#fff',
-  '@media (max-width: 768px)': {
-    display: 'none',
-  },
 })

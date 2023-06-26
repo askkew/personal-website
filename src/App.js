@@ -8,6 +8,7 @@ import Scrolldownarrow from './components/scrolldownarrow';
 import styled from '@emotion/styled';
 import Contactcard from './components/contactcard';
 import { ToastContainer } from 'react-toastify';
+import { Socials } from './components/navmenu';
 
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
@@ -22,6 +23,13 @@ const originalColors = [
   'purple',
   'yellow',
 ];
+
+const Socialscontainer = styled('div')({
+  //display content when screen is smaller than 600px
+  '@media (min-width: 768px)': {
+    display: 'none',
+  },
+})
 
 const Projectcontainer = styled('div')({
   display: 'flex',
@@ -95,6 +103,9 @@ class App extends React.Component {
                     <div className="slide">
                       <h3>{text}</h3>
                       {description && <h4>{description}</h4>}
+                      <Socialscontainer>
+                        <Socials />
+                      </Socialscontainer>
                       <Scrolldownarrow />
                     </div>
                   )}

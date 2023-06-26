@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { Button, FormControl, TextField } from '@mui/material'
+import { lightText } from '../utils/index.jsx';
 
 export const Contactcardcontainer = styled('div')({
   display: 'flex',
@@ -38,4 +39,18 @@ export const StyledButton = styled(Button)({
   '&:active': {
     borderBottom: '2px solid rgba(51, 51, 51, 0.85)',
   }
+})
+
+export const Contacttitle = styled('h1')({
+  fontSize: '3em',
+  margin: 0,
+  color: lightText,
+  '@media (max-width: 600px)': {
+    fontSize: '2em',
+  },
+  '@media (max-width: 300px)': {
+    fontSize: '1.5em',
+  },
+  textAlign: 'center',
+  fontWeight: 700,
 })
