@@ -1,8 +1,7 @@
 import React from 'react'
-import { Contactcardcontainer, Customtextfield, StyledFormControl, StyledButton } from "./contactcardstyles.jsx"
+import { Contactcardcontainer, Contacttitle, Customtextfield, StyledFormControl, StyledButton } from "./contactcardstyles.jsx"
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 import { createTheme, ThemeProvider, Theme, useTheme } from '@mui/material/styles';
-import { lightText } from '../utils/index.jsx';
 import emailjs from "@emailjs/browser";
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
@@ -110,7 +109,7 @@ const Contactcard = () => {
   return (
     <Contactcardcontainer>
       <StyledFormControl ref={form}>
-        <h3 style={{fontSize: '3em', margin: 0, color: lightText}}>Contact me!</h3>
+        <Contacttitle>Contact me!</Contacttitle>
         <ThemeProvider theme={customTheme(outerTheme)}>
           <Customtextfield variant="filled" id="mui-theme-provider-filled-input" label="Name" />
           <Customtextfield variant="filled" id="mui-theme-provider-filled-input" label="Email" />
