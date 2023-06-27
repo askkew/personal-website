@@ -8,7 +8,7 @@ export const Contactcardcontainer = styled('div')({
   justifyContent: 'center',
   alignItems: 'center',
   width: 'clamp(250px, 75vw, 1000px)',
-  height: 'clamp(175px, 65vh, 700px)',
+  height: 'clamp(250px, 65vh, 700px)',
   border: '8px solid #eaeaea',
   backgroundColor: '#eaeaea',
 })
@@ -25,6 +25,7 @@ export const StyledFormControl = styled('form')({
   justifyContent: 'center',
   alignItems: 'center',
   gap: '1em',
+  gap: '0.4em',
 })
 
 export const StyledButton = styled(Button)({
