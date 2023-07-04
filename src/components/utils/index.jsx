@@ -5,6 +5,7 @@ import tdscpicture from "./assets/tdscnew.png"
 import medpluspicture from "./assets/medplusnew.png"
 import techlitepicture from "./assets/techlitenew.png"
 import monicapicture from './assets/monicafinal.png'
+import d2raidtoolpicture from './assets/secondiconred.png'
 
 export const darkText = '#22223B'
 export const lightText = '#4A4E69'
@@ -37,6 +38,32 @@ export const projectData = [
       },
       {
         name: "nodejs",
+        color: thirdTag,
+      },
+    ],
+  },
+  {
+    title: "D2 Raid Tool",
+    description: "D2 Raid Tool is a react-native app that allows users to login via Bungie OAuth2.0 and move items around their inventories quickly during a Raid when time is valuable.",
+    githublink: "https://github.com/askkew/d2-raid-tool",
+    link: "https://github.com/askkew/d2-raid-tool",
+    image: d2raidtoolpicture,
+    imagesize: 200,
+    tags: [
+      {
+        name: "react-native",
+        color: firstTag,
+      },
+      {
+        name: "typescript",
+        color: secondTag,
+      },
+      {
+        name: "nodejs",
+        color: thirdTag,
+      },
+      {
+        name: "RESTful API",
         color: thirdTag,
       },
     ],

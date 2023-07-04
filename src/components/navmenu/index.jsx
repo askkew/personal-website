@@ -29,7 +29,7 @@ export const Socials = () => {
       <Socialicon title="Linkedin" href="https://www.linkedin.com/in/luke-overbey-37b342235/">
         <LinkedInIcon style={{fontSize: '1.8rem'}} />
       </Socialicon>
-      <Socialicon title="Resume" href="https://docs.google.com/document/d/e/2PACX-1vSoHHgpubNRERgMiVlF2--dMaiBmGjPk67aT1FCcQlcPU9kJHNIjBjFW1NaQL7eNHtAcquQgm7jzvA5/pub">
+      <Socialicon title="Resume" href="https://docs.google.com/document/d/e/2PACX-1vQpwQ8amWNrQpnltl0WjlXrlbzYVa4AUuUDClur4gdqZpyD6g1nbTIvy_1ezU5wmdr-QPP_9yYF8WT-/pub">
         <AssignmentIndIcon style={{fontSize: '1.8rem'}} />
       </Socialicon>
     </>

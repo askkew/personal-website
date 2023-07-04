@@ -42,13 +42,18 @@ export const Projectimagewrapper = styled('div')({
   width: '100%',
   height: '100%',
   overflow: 'hidden',
-  //img tag
+  position: 'relative',
   '& img': {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
-  }
-})
+  },
+  '&:hover': {
+    '& ~ ${DropdownContent}': {
+      display: 'block',
+    },
+  },
+});
 
 export const Socialbuttoncontainer = styled('div')({
   justifySelf: 'start',
@@ -66,3 +71,25 @@ export const Projectcardbannertitle = styled('h1')({
 export const Bannertitlecontainer = styled('div')({
   textAlign: 'center',
 })
+
+export const DropdownContent = styled('div')({
+  position: 'absolute',
+  top: '100%',
+  left: 0,
+  width: '100%',
+  backgroundColor: '#fff',
+  padding: '10px',
+  display: 'none',
+  animation: 'slide-down 0.3s ease',
+  // Animation keyframes
+  '@keyframes slide-down': {
+    '0%': {
+      opacity: 0,
+      transform: 'translateY(-10px)',
+    },
+    '100%': {
+      opacity: 1,
+      transform: 'translateY(0)',
+    },
+  },
+});
