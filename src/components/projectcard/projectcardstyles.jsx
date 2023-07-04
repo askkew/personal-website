@@ -68,14 +68,23 @@ export const HoverTextContainer = styled('div')({
 
 export const ProjectText = styled('h1')({
   fontSize: '2rem',
+  '@media (max-width: 768px)': {
+    fontSize: '1.3rem',
+  },
 })
 
 export const ProjectDesc = styled('h1')({
   fontSize: '1.2rem',
+  '@media (max-width: 768px)': {
+    fontSize: '0.9rem',
+  },
 })
 
 export const ProjectTag = styled('h1')({
   fontSize: '1.2rem',
+  '@media (max-width: 768px)': {
+    fontSize: '0.9rem',
+  },
 })
 
 export const TagsContainer = styled('div')({
