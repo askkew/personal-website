@@ -70,7 +70,8 @@ const Projectcard = ({project}) => {
             <TagsContainer>
             {tempTags.map(tag => {
               return (
-                <ProjectTag style={{color: `${tag.color}`}}>{tag.name}</ProjectTag>
+                // <ProjectTag style={{color: `${tag.color}`}}>{tag.name}</ProjectTag>
+                <ProjectTag style={{color: 'gainsboro'}}>{tag.name}</ProjectTag>
               )
             })}
             </TagsContainer>
