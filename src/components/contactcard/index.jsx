@@ -50,50 +50,65 @@ const Contactcard = () => {
   const template = process.env.REACT_APP_TEMPLATE_ID;
   const user = process.env.REACT_APP_USER_ID;
   const form = useRef();
+  let lastExecutionTime = 0;
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    console.log({service, template, user})
-    if (form.current) {
-      emailjs
-        .sendForm(
-          service || "",
-          template || "",
-          form.current,
-          user
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            console.log("message sent");
-            toast.success('Message Sent Successfully!', {
-              position: "top-left",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "dark",
-              });
-          },
-          (error) => {
-            console.log(error.text);
-            toast.error('Error!', {
-              position: "top-left",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "dark",
-              });
-          }
-        );
+const sendEmail = (e) => {
+  e.preventDefault();
+  const currentTime = Date.now();
+  const timeElapsed = currentTime - lastExecutionTime;
+  if (timeElapsed < 30000) {
+    const remainingTime = Math.ceil((30000 - timeElapsed) / 1000);
+    toast.error(`Please wait ${remainingTime} seconds before sending another email.`, {
+      position: "top-left",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+    return;
+  }
+
+  console.log({ service, template, user });
+
+  if (form.current) {
+    emailjs
+      .sendForm(service || "", template || "", form.current, user)
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+          toast.success("Message Sent Successfully!", {
+            position: "top-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error("Error!", {
+            position: "top-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
+      );
+    lastExecutionTime = currentTime;
     } else {
       console.log("Form is not defined");
-      toast.error('Error!', {
+      toast.error("Error!", {
         position: "top-left",
         autoClose: 5000,
         hideProgressBar: false,
@@ -102,7 +117,7 @@ const Contactcard = () => {
         draggable: true,
         progress: undefined,
         theme: "dark",
-        });
+      });
     }
   };
 
