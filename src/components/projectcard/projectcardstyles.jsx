@@ -64,6 +64,9 @@ export const Bannertitlecontainer = styled('div')({
 
 export const HoverTextContainer = styled('div')({
   width: '60%',
+  '@media (max-width: 768px)': {
+    width: '90%',
+  },
 })
 
 export const ProjectText = styled('h1')({
@@ -91,4 +94,5 @@ export const TagsContainer = styled('div')({
   // backgroundColor: 'rgba(92, 92, 92)',
   // display: 'inline-block',
   // padding: 10,
+  // display: 'flex',
 })

@@ -40,6 +40,10 @@ export const projectData = [
         name: "nodejs",
         color: thirdTag,
       },
+      {
+        name: "re-charts",
+        color: thirdTag,
+      },
     ],
   },
   {
@@ -70,7 +74,7 @@ export const projectData = [
   },
   {
     title: "Monica Medellin Art",
-    description: "Silver Armory is a website built to allow Destiny 2 users to view the inventories of other users' Guardians from a database used by over a million players daily.",
+    description: "Art website for Monica Medellin and her business in art consulting to help students compete at the Houston Rodeo Art Auction, this website is meant to attract more clients and customers for this service.",
     githublink: "https://github.com/askkew/monica-site",
     link: "https://monica-medellin-art.netlify.app/",
     image: monicapicture,
@@ -85,7 +89,11 @@ export const projectData = [
         color: secondTag,
       },
       {
-        name: "nodejs",
+        name: "emailjs",
+        color: thirdTag,
+      },
+      {
+        name: "react-parallax",
         color: thirdTag,
       },
     ],
@@ -111,7 +119,7 @@ export const projectData = [
         color: thirdTag,
       },
       {
-        name: "mongodb",
+        name: "react-redux",
         color: fourthTag,
       },
     ],
@@ -132,7 +140,7 @@ export const projectData = [
         color: secondTag,
       },
       {
-        name: "nodejs",
+        name: "emailjs",
         color: thirdTag,
       },
     ],
@@ -154,7 +162,7 @@ export const projectData = [
         color: secondTag,
       },
       {
-        name: "nodejs",
+        name: "emailjs",
         color: thirdTag,
       },
     ],
