@@ -5,7 +5,7 @@ import tdscpicture from "./assets/tdscnew.png"
 import medpluspicture from "./assets/medplusnew.png"
 import techlitepicture from "./assets/techlitenew.png"
 import monicapicture from './assets/monicafinal.png'
-import d2raidtoolpicture from './assets/secondiconred.png'
+import d2raidtoolpicture from './assets/d2raidtoolfinal.png'
 
 export const darkText = '#22223B'
 export const lightText = '#4A4E69'
@@ -69,7 +69,7 @@ export const projectData = [
     ],
   },
   {
-    title: "Monica Medellin Art - WIP",
+    title: "Monica Medellin Art",
     description: "Silver Armory is a website built to allow Destiny 2 users to view the inventories of other users' Guardians from a database used by over a million players daily.",
     githublink: "https://github.com/askkew/monica-site",
     link: "https://monica-medellin-art.netlify.app/",

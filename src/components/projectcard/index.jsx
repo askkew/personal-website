@@ -1,13 +1,54 @@
 import React from 'react'
 import { useState } from 'react';
-import { DropdownContent, Projectcardcontainer, Projectimagewrapper, Bannertitlecontainer, Socialbuttoncontainer, Projectcardbanner, Projectcardimageconatiner, Projectcardbannertitle } from "./projectcardstyles.jsx"
+import { HoverTextContainer, ProjectText, ProjectDesc, ProjectTag, TagsContainer, HoverContent, Textcontainer, DropdownContent, Projectcardcontainer, Projectimagewrapper, Bannertitlecontainer, Socialbuttoncontainer, Projectcardbanner, Projectcardimageconatiner, Projectcardbannertitle } from "./projectcardstyles.jsx"
 import { BiLinkExternal } from 'react-icons/bi';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InfoIcon from '@mui/icons-material/Info';
 import { FaInfo } from 'react-icons/fa';
 import { LuGithub } from 'react-icons/lu';
+import styled from 'styled-components';
+
+const CardContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+`;
+
+const CardImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+`;
+
+const CardText = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-weight: bold;
+
+  ${CardContainer}:hover & {
+    opacity: 1;
+  };
+  ${CardContainer}:active & {
+    opacity: 1;
+  };
+`;
 
 const Projectcard = ({project}) => {
+
+  const tempTags = project.tags
   return (
     <Projectcardcontainer>
       <Projectcardbanner>
@@ -20,11 +61,22 @@ const Projectcard = ({project}) => {
           <Projectcardbannertitle>{project.title}</Projectcardbannertitle>
         </Bannertitlecontainer>
       </Projectcardbanner>
-      <Projectcardimageconatiner>
-        <Projectimagewrapper>
-          <img src={project.image} alt={project.title} />
-        </Projectimagewrapper>
-      </Projectcardimageconatiner>
+      <CardContainer>
+        <CardImage src={project.image} alt="Card Background" />
+        <CardText>
+          <HoverTextContainer>
+            <ProjectText>{project.title}</ProjectText>
+            <ProjectDesc>{project.description}</ProjectDesc>
+            <TagsContainer>
+            {tempTags.map(tag => {
+              return (
+                <ProjectTag style={{color: `${tag.color}`}}>{tag.name}</ProjectTag>
+              )
+            })}
+            </TagsContainer>
+          </HoverTextContainer>
+        </CardText>
+      </CardContainer>
     </Projectcardcontainer>
   )
 }

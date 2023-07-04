@@ -39,20 +39,10 @@ export const Projectcardimageconatiner = styled('div')({
 })
 
 export const Projectimagewrapper = styled('div')({
+  position: 'relative',
   width: '100%',
   height: '100%',
   overflow: 'hidden',
-  position: 'relative',
-  '& img': {
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-  },
-  '&:hover': {
-    '& ~ ${DropdownContent}': {
-      display: 'block',
-    },
-  },
 });
 
 export const Socialbuttoncontainer = styled('div')({
@@ -72,24 +62,24 @@ export const Bannertitlecontainer = styled('div')({
   textAlign: 'center',
 })
 
-export const DropdownContent = styled('div')({
-  position: 'absolute',
-  top: '100%',
-  left: 0,
-  width: '100%',
-  backgroundColor: '#fff',
-  padding: '10px',
-  display: 'none',
-  animation: 'slide-down 0.3s ease',
-  // Animation keyframes
-  '@keyframes slide-down': {
-    '0%': {
-      opacity: 0,
-      transform: 'translateY(-10px)',
-    },
-    '100%': {
-      opacity: 1,
-      transform: 'translateY(0)',
-    },
-  },
-});
+export const HoverTextContainer = styled('div')({
+  width: '60%',
+})
+
+export const ProjectText = styled('h1')({
+  fontSize: '2rem',
+})
+
+export const ProjectDesc = styled('h1')({
+  fontSize: '1.2rem',
+})
+
+export const ProjectTag = styled('h1')({
+  fontSize: '1.2rem',
+})
+
+export const TagsContainer = styled('div')({
+  // backgroundColor: 'rgba(92, 92, 92)',
+  // display: 'inline-block',
+  // padding: 10,
+})
