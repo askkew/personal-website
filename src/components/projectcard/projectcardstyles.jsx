@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import { darkText, lightText } from "../utils";
+import { BiLinkExternal } from 'react-icons/bi';
+import { LuGithub } from 'react-icons/lu';
 
 export const Projectcardcontainer = styled('div')({
   display: 'flex',
@@ -52,10 +54,13 @@ export const Socialbuttoncontainer = styled('div')({
 })
 
 export const Projectcardbannertitle = styled('h1')({
-  fontSize: '1.2rem',
   color: lightText,
   textAlign: 'center',
   margin: 0,
+  fontSize: '2rem',
+  '@media (max-width: 568px)': {
+    fontSize: '1.2rem',
+  }
 })
 
 export const Bannertitlecontainer = styled('div')({
@@ -95,4 +100,26 @@ export const TagsContainer = styled('div')({
   // display: 'inline-block',
   // padding: 10,
   // display: 'flex',
+})
+
+export const GithubIconCustom = styled(LuGithub)({
+  fontSize: '2rem',
+  color: '#eaeaea',
+  borderRadius: '50%',
+  backgroundColor: 'rgb(42,184,74)',
+  padding: 3,
+  '@media (max-width: 568px)': {
+    fontSize: '1.2rem',
+  }
+})
+
+export const LinkIconCustom = styled(BiLinkExternal)({
+  fontSize: '2rem',
+  color: '#eaeaea',
+  borderRadius: '50%',
+  backgroundColor: 'rgb(235,97,79)',
+  padding: 3,
+  '@media (max-width: 568px)': {
+    fontSize: '1.2rem',
+  }
 })

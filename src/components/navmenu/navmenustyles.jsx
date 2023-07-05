@@ -64,3 +64,14 @@ export const Navmenuitem = styled('a')({
 export const Socialicon = styled('a')({
   color: '#fff',
 })
+
+export const Refreshcontainer = styled('div')({
+  display: 'flex',
+  alignItems: 'center',
+  position: 'fixed',
+  top: 20,
+  left: 0,
+  zIndex: 100,
+  marginRight: '2em',
+  marginLeft: '2em',
+})
