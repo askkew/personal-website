@@ -32,9 +32,9 @@ const CardText = styled.div`
   opacity: 0;
   transition: opacity 0.3s;
   background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
   color: #fff;
   font-weight: bold;
-
   ${CardContainer}:hover & {
     opacity: 1;
   };
