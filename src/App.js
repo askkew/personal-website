@@ -68,7 +68,7 @@ class App extends React.Component {
   componentDidMount() {
     this.randomizeColors();
   }
-
+  
   randomizeColors() {
     const { sectionsColor } = this.state;
     const randomizedColors = sectionsColor.map(() => getRandomColor());
@@ -85,7 +85,6 @@ class App extends React.Component {
     if (!fullpages.length) {
       return null;
     }
-
     return (
       <>
         <ToastContainer />
