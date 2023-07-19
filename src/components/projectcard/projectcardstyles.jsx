@@ -8,8 +8,8 @@ export const Projectcardcontainer = styled('div')({
   flexDirection: 'column',
   justifyContent: 'top',
   alignItems: 'center',
-  width: 'clamp(250px, 75vw, 1000px)',
-  height: 'clamp(175px, 65vh, 700px)',
+  width: 'clamp(250px, 75vw, 1300px)',
+  height: 'clamp(175px, 65vh, 850px)',
   border: '8px solid #eaeaea',
   '@media (max-width: 768px)': {
     height: 'clamp(175px, 65vh, 300px)',

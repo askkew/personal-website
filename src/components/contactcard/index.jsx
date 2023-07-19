@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser";
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import { useRef } from "react";
+import { useState } from 'react';
 
 
 const customTheme = (outerTheme) =>
@@ -51,66 +52,33 @@ const Contactcard = () => {
   const user = process.env.REACT_APP_USER_ID;
   const form = useRef();
   let lastExecutionTime = 0;
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-const sendEmail = (e) => {
-  e.preventDefault();
-  const currentTime = Date.now();
-  const timeElapsed = currentTime - lastExecutionTime;
-  if (timeElapsed < 30000) {
-    const remainingTime = Math.ceil((30000 - timeElapsed) / 1000);
-    toast.error(`Please wait ${remainingTime} seconds before sending another email.`, {
-      position: "top-left",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-    return;
-  }
+  const isFormValid = name && email && message;
 
-  console.log({ service, template, user });
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
 
-  if (form.current) {
-    emailjs
-      .sendForm(service || "", template || "", form.current, user)
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log("message sent");
-          toast.success("Message Sent Successfully!", {
-            position: "top-left",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          toast.error("Error!", {
-            position: "top-left",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-        }
-      );
-    lastExecutionTime = currentTime;
-    } else {
-      console.log("Form is not defined");
-      toast.error("Error!", {
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const currentTime = Date.now();
+    const timeElapsed = currentTime - lastExecutionTime;
+    if (timeElapsed < 30000) {
+      const remainingTime = Math.ceil((30000 - timeElapsed) / 1000);
+      toast.error(`Please wait ${remainingTime} seconds before sending another email.`, {
         position: "top-left",
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -118,25 +86,89 @@ const sendEmail = (e) => {
         progress: undefined,
         theme: "dark",
       });
+      return;
     }
-  };
+
+    console.log({ service, template, user });
+
+    if (form.current) {
+      emailjs
+        .sendForm(service || "", template || "", form.current, user)
+        .then(
+          (result) => {
+            console.log(result.text);
+            console.log("message sent");
+            toast.success("Message Sent Successfully!", {
+              position: "top-left",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            });
+          },
+          (error) => {
+            console.log(error.text);
+            toast.error("Error!", {
+              position: "top-left",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            });
+          }
+        );
+      lastExecutionTime = currentTime;
+      } else {
+        console.log("Form is not defined");
+        toast.error("Error!", {
+          position: "top-left",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
+    };
 
   return (
     <Contactcardcontainer>
       <StyledFormControl ref={form}>
         <Contacttitle>Contact me!</Contacttitle>
         <ThemeProvider theme={customTheme(outerTheme)}>
-          <Customtextfield variant="filled" id="mui-theme-provider-filled-input" label="Name" />
-          <Customtextfield variant="filled" id="mui-theme-provider-filled-input" label="Email" />
           <Customtextfield
-            variant="filled"
-            id="filled-multiline-static"
-            label="Message"
-            multiline
-            rows={7}
-            style={{width: '70%', backgroundColor: 'gainsboro'}}
+          variant="filled"
+          id="mui-theme-provider-filled-input"
+          label="Name"
+          value={name}
+          onChange={handleNameChange}
           />
-          <StyledButton onClick={sendEmail}>Send</StyledButton>
+          <Customtextfield
+          variant="filled"
+          id="mui-theme-provider-filled-input"
+          label="Email"
+          value={email}
+          onChange={handleEmailChange}
+          />
+          <Customtextfield
+          variant="filled"
+          id="filled-multiline-static"
+          label="Message"
+          multiline
+          rows={7}
+          style={{width: '70%', backgroundColor: 'gainsboro'}}
+          value={message}
+          onChange={handleMessageChange}
+          />
+          <StyledButton onClick={sendEmail} disabled={!isFormValid}>Send</StyledButton>
         </ThemeProvider>
       </StyledFormControl>
     </Contactcardcontainer>

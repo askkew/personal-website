@@ -57,7 +57,7 @@ const Projectcard = ({project}) => {
           <Projectcardbannertitle>{project.title}</Projectcardbannertitle>
         </Bannertitlecontainer>
       </Projectcardbanner>
-      <CardContainer>
+      <CardContainer style={{ backgroundColor: 'black' }}>
         <CardImage src={project.image} alt="Card Background" />
         <CardText>
           <HoverTextContainer>

@@ -1,10 +1,12 @@
-import silverpicture from "./assets/silverarmoryfinal.png"
+import silverpicture from "./assets/silvernew.png"
 import d2itemspicture from "./assets/d2itemsfinal.png"
-import portfoliopicture from "./assets/techlitenew.png"
+import d2itemsmobile from "./assets/d2itemsmobile.png"
+import weathertestreact from "./assets/weathertest.png"
+import weathertestswift from "./assets/weatherappswift.png"
 import tdscpicture from "./assets/tdscnew.png"
 import medpluspicture from "./assets/medplusnew.png"
 import techlitepicture from "./assets/techlitenew.png"
-import monicapicture from './assets/monicafinal.png'
+import critart from './assets/critart.png'
 import d2raidtoolpicture from './assets/d2raidtoolfinal.png'
 
 export const darkText = '#22223B'
@@ -17,7 +19,6 @@ export const secondTag = 'rgb(48,68,82)';
 export const thirdTag = 'rgb(108,55,90)';
 export const fourthTag = 'rgb(78, 116, 87)';
 export const fifthTag = 'rgb(87, 78, 116)';
-
 
 export const projectData = [
   {
@@ -73,11 +74,11 @@ export const projectData = [
     ],
   },
   {
-    title: "Monica Medellin Art",
+    title: "Crit Art Consulting",
     description: "Art website for Monica Medellin and her business in art consulting to help students compete at the Houston Rodeo Art Auction, this website is meant to attract more clients and customers for this service.",
     githublink: "https://github.com/askkew/monica-site",
-    link: "https://monica-medellin-art.netlify.app/",
-    image: monicapicture,
+    link: "https://critartconsulting.com/",
+    image: critart,
     imagesize: 200,
     tags: [
       {
@@ -100,18 +101,18 @@ export const projectData = [
   },
   {
     title: "D2items - WIP",
-    description: "D2items is an item search app for the game Destiny 2 that allows users to search for items, weapons, and armor in the game.",
+    description: "D2items is an item search app for the game Destiny 2 that allows users to search for items, weapons, and armor in the game. Built with Swift and SwiftUI for the front end and NodeJS and Javascript for the backend.",
     githublink: "https://github.com/askkew/destiny-search-engine",
     link: "https://github.com/askkew/destiny-search-engine",
-    image: d2itemspicture,
+    image: d2itemsmobile,
     imagesize: 200,
     tags: [
       {
-        name: "react",
+        name: "Swift",
         color: firstTag,
       },
       {
-        name: "typescript",
+        name: "SwiftUI",
         color: secondTag,
       },
       {
@@ -119,13 +120,13 @@ export const projectData = [
         color: thirdTag,
       },
       {
-        name: "react-redux",
+        name: "javascript",
         color: fourthTag,
       },
     ],
   },
   {
-    title: "TDSC - WIP",
+    title: "TDSC",
     description: "TDSC is a shooting club operated out of Houston Texas that brings together gun enthusiasts for self defense classes and range days.",
     githublink: "https://github.com/snyperifle/TDSC",
     link: "https://tdscbeta.netlify.app/",
@@ -192,30 +193,48 @@ export const projectData = [
       },
     ],
   },
-  // {
-  //   title: "Weather app",
-  //   description: "This is a basic ReactJS application that allows users to get the current weather details as well as the following 6 day forecast for any city.",
-  //   githublink: "https://github.com/askkew/WeatherApp",
-  //   link: "https://weather-app-askew.netlify.app/",
-  //   image: "./public/assets/weathertest.png",
-  //   imagesize: 200,
-  //   tags: [
-  //     {
-  //       name: "react",
-  //       color: firstTag,
-  //     },
-  //     {
-  //       name: "typescript",
-  //       color: secondTag,
-  //     },
-  //     {
-  //       name: "nodejs",
-  //       color: thirdTag,
-  //     },
-  //     {
-  //       name: "mongodb",
-  //       color: fourthTag,
-  //     },
-  //   ],
-  // },
+  {
+    title: "Swift Weather app",
+    description: "This is a basic Swift and SwiftUI application that allows users to get the current weather details using their current location data.",
+    githublink: "https://github.com/askkew/WeatherApp",
+    link: "https://github.com/askkew/WeatherApp",
+    image: weathertestswift,
+    imagesize: 200,
+    tags: [
+      {
+        name: "Swift",
+        color: firstTag,
+      },
+      {
+        name: "SwiftUI",
+        color: secondTag,
+      },
+    ],
+  },
+  {
+    title: "ReactJS Weather app",
+    description: "This is a basic ReactJS application that allows users to get the current weather details as well as the following 6 day forecast for any city.",
+    githublink: "https://github.com/askkew/WeatherApp",
+    link: "https://github.com/askkew/WeatherApp",
+    image: weathertestreact,
+    imagesize: 200,
+    tags: [
+      {
+        name: "react",
+        color: firstTag,
+      },
+      {
+        name: "typescript",
+        color: secondTag,
+      },
+      {
+        name: "nodejs",
+        color: thirdTag,
+      },
+      {
+        name: "mongodb",
+        color: fourthTag,
+      },
+    ],
+  },
 ]
