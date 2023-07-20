@@ -74,45 +74,19 @@ export const projectData = [
     ],
   },
   {
-    title: "Crit Art Consulting",
-    description: "Art website for Monica Medellin and her business in art consulting to help students compete at the Houston Rodeo Art Auction, this website is meant to attract more clients and customers for this service.",
-    githublink: "https://github.com/askkew/monica-site",
-    link: "https://critartconsulting.com/",
-    image: critart,
-    imagesize: 200,
-    tags: [
-      {
-        name: "react",
-        color: firstTag,
-      },
-      {
-        name: "typescript",
-        color: secondTag,
-      },
-      {
-        name: "emailjs",
-        color: thirdTag,
-      },
-      {
-        name: "react-parallax",
-        color: thirdTag,
-      },
-    ],
-  },
-  {
     title: "D2items - WIP",
-    description: "D2items is an item search app for the game Destiny 2 that allows users to search for items, weapons, and armor in the game. Built with Swift and SwiftUI for the front end and NodeJS and Javascript for the backend.",
+    description: "D2items is an item search app for the game Destiny 2 that allows users to search for items, weapons, and armor in the game. Built with ReactJS and Typescript for the front end and NodeJS and Javascript for the backend.",
     githublink: "https://github.com/askkew/destiny-search-engine",
-    link: "https://github.com/askkew/destiny-search-engine",
+    // link: "https://github.com/askkew/destiny-search-engine",
     image: d2itemsmobile,
     imagesize: 200,
     tags: [
       {
-        name: "Swift",
+        name: "ReactJS",
         color: firstTag,
       },
       {
-        name: "SwiftUI",
+        name: "typescript",
         color: secondTag,
       },
       {
@@ -126,78 +100,10 @@ export const projectData = [
     ],
   },
   {
-    title: "TDSC",
-    description: "TDSC is a shooting club operated out of Houston Texas that brings together gun enthusiasts for self defense classes and range days.",
-    githublink: "https://github.com/snyperifle/TDSC",
-    link: "https://tdscbeta.netlify.app/",
-    image: tdscpicture,
-    tags: [
-      {
-        name: "react",
-        color: firstTag,
-      },
-      {
-        name: "typescript",
-        color: secondTag,
-      },
-      {
-        name: "emailjs",
-        color: thirdTag,
-      },
-    ],
-  },
-  {
-    title: "MedPLUS - WIP",
-    description: "MedPLUS specializes in providing innovative and comprehensive medical professional liability insurance products through financially secure, A.M. Best Rated insurance carriers.",
-    githublink: "https://github.com/snyperifle/medPlus",
-    link: "https://snyperifle.github.io/medPlus/",
-    image: medpluspicture,
-    imageSize: 50,
-    tags: [
-      {
-        name: "react",
-        color: firstTag,
-      },
-      {
-        name: "typescript",
-        color: secondTag,
-      },
-      {
-        name: "emailjs",
-        color: thirdTag,
-      },
-    ],
-  },
-  {
-    title: "Techlite",
-    description: "Techlite is an E-commerce website built on the LAMP stack and designed by a team of students as a term project.",
-    githublink: "https://github.com/Scrub-Sauce/Scared2Compile",
-    link: "https://github.com/Scrub-Sauce/Scared2Compile",
-    image: techlitepicture,
-    tags: [
-      {
-        name: "javascript",
-        color: firstTag,
-      },
-      {
-        name: "php",
-        color: secondTag,
-      },
-      {
-        name: "css",
-        color: thirdTag,
-      },
-      {
-        name: "mysql",
-        color: fourthTag,
-      },
-    ],
-  },
-  {
     title: "Swift Weather app",
     description: "This is a basic Swift and SwiftUI application that allows users to get the current weather details using their current location data.",
-    githublink: "https://github.com/askkew/WeatherApp",
-    link: "https://github.com/askkew/WeatherApp",
+    githublink: "https://github.com/askkew/swift-weather-app",
+    // link: "https://github.com/askkew/WeatherApp",
     image: weathertestswift,
     imagesize: 200,
     tags: [
@@ -234,6 +140,111 @@ export const projectData = [
       {
         name: "mongodb",
         color: fourthTag,
+      },
+    ],
+  },
+  {
+    title: "Techlite",
+    description: "Techlite is an E-commerce website built on the LAMP stack and designed by a team of students as a term project.",
+    githublink: "https://github.com/Scrub-Sauce/Scared2Compile",
+    link: "https://github.com/Scrub-Sauce/Scared2Compile",
+    image: techlitepicture,
+    tags: [
+      {
+        name: "javascript",
+        color: firstTag,
+      },
+      {
+        name: "php",
+        color: secondTag,
+      },
+      {
+        name: "css",
+        color: thirdTag,
+      },
+      {
+        name: "mysql",
+        color: fourthTag,
+      },
+    ],
+  },
+]
+
+export const workData = [
+  {
+    title: "Crit Art Consulting",
+    description: "Art website for Monica Medellin and her business in art consulting to help students compete at the Houston Rodeo Art Auction, this website is meant to attract more clients and customers for this service.",
+    githublink: "https://github.com/askkew/monica-site",
+    link: "https://critartconsulting.com/",
+    image: critart,
+    imagesize: 200,
+    tags: [
+      {
+        name: "react",
+        color: firstTag,
+      },
+      {
+        name: "typescript",
+        color: secondTag,
+      },
+      {
+        name: "emailjs",
+        color: thirdTag,
+      },
+      {
+        name: "react-parallax",
+        color: thirdTag,
+      },
+    ],
+  },
+  {
+    title: "TDSC",
+    description: "TDSC is a shooting club operated out of Houston Texas that brings together gun enthusiasts for self defense classes and range days. The scope of this project included a complete rework and redesign of their website as well as the implementation of an emailing service. Furthermore, I built a database and admin dashboard to store subscribers and donations for alerts.",
+    githublink: "https://github.com/snyperifle/TDSC",
+    link: "https://tdscbeta.netlify.app/",
+    image: tdscpicture,
+    tags: [
+      {
+        name: "react",
+        color: firstTag,
+      },
+      {
+        name: "typescript",
+        color: secondTag,
+      },
+      {
+        name: "emailjs",
+        color: thirdTag,
+      },
+      {
+        name: "SQL Server",
+        color: thirdTag,
+      },
+      {
+        name: "AWS",
+        color: thirdTag,
+      },
+    ],
+  },
+  {
+    title: "MedPLUS - WIP",
+    description: "MedPLUS specializes in providing innovative and comprehensive medical professional liability insurance products through financially secure, A.M. Best Rated insurance carriers.",
+    githublink: "https://github.com/snyperifle/medPlus",
+    link: "https://snyperifle.github.io/medPlus/",
+    image: medpluspicture,
+    imageSize: 50,
+    tags: [
+      {
+        name: "react",
+        color: firstTag,
+      },
+      {
+        name: "typescript",
+        color: secondTag,
+      },
+      {
+        name: "emailjs",
+        color: thirdTag,
       },
     ],
   },

@@ -4,7 +4,7 @@ import './styles.css';
 import Navmenu from './components/navmenu';
 import Refreshcomponent from './components/navmenu';
 import Projectcard from './components/projectcard';
-import { projectData } from './components/utils';
+import { projectData, workData } from './components/utils';
 import Scrolldownarrow from './components/scrolldownarrow';
 import styled from '@emotion/styled';
 import Contactcard from './components/contactcard';
@@ -56,7 +56,10 @@ class App extends React.Component {
           description: 'Full Stack Developer',
         },
         {
-          text: 'Experience | Work',
+          text: 'Projects',
+        },
+        {
+          text: 'Work',
         },
         {
           text: 'Contact me',
@@ -94,7 +97,7 @@ class App extends React.Component {
           pluginWrapper={() => {}}
           licenseKey={'YOUR_KEY_HERE'}
           navigation
-          anchors={['firstPage', 'secondPage', 'thirdPage']}
+          anchors={['firstPage', 'secondPage', 'thirdPage', 'fourthpage']}
           sectionSelector={SECTION_SEL}
           onLeave={this.onLeave.bind(this)}
           sectionsColor={this.state.sectionsColor}
@@ -104,6 +107,7 @@ class App extends React.Component {
                 <div key={text} className={SEL}>
                   {index === 1 ? (
                     <>
+                      {/* <h1>my projects</h1> */}
                       {projectData.map((project) => (
                         <Projectcontainer className="slide">
                           <Projectcard project={project} />
@@ -111,6 +115,15 @@ class App extends React.Component {
                       ))}
                     </>
                   ) : index === 2 ? (
+                    <>
+                      {/* <h1>my freelance work</h1> */}
+                      {workData.map((work) => (
+                        <Projectcontainer className="slide">
+                          <Projectcard project={work} />
+                        </Projectcontainer>
+                      ))}
+                    </>
+                  ) : index === 3 ? (
                     <Projectcontainer className="slide">
                       <Contactcard />
                     </Projectcontainer>
@@ -135,126 +148,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-// import React from 'react';
-// import ReactFullpage from '@fullpage/react-fullpage';
-// import './styles.css';
-// import Navmenu from './components/navmenu';
-// import Projectcard from './components/projectcard';
-// import { projectData } from './components/utils';
-// import Scrolldownarrow from './components/scrolldownarrow';
-// import styled from '@emotion/styled';
-// import Contactcard from './components/contactcard';
-// import { ToastContainer } from 'react-toastify';
-// import { Socials } from './components/navmenu';
-
-// const SEL = 'custom-section';
-// const SECTION_SEL = `.${SEL}`;
-
-// const originalColors = [
-//   '#C9ADA7',
-//   '#9A8C98',
-//   '#435b71',
-//   '#F2E9E4',
-//   '#B36D68',
-//   '#B3A869',
-//   '#677F89',
-//   '#B38A6D',
-// ];
-
-// const Socialscontainer = styled('div')({
-//   //display content when screen is smaller than 600px
-//   '@media (min-width: 768px)': {
-//     display: 'none',
-//   },
-// })
-
-// const Projectcontainer = styled('div')({
-//   display: 'flex',
-//   flexDirection: 'column',
-//   justifyContent: 'center',
-//   alignItems: 'center',
-// })
-
-// class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       sectionsColor: [...originalColors],
-//       fullpages: [
-//         {
-//           text: 'Lucas Overbey',
-//           description: 'Full Stack Developer',
-//         },
-//         {
-//           text: 'Experience | Work',
-//         },
-//         {
-//           text: 'Contact me',
-//         },
-//       ],
-//     };
-//   }
-
-//   onLeave(origin, destination, direction) {
-//     console.log('onLeave', { origin, destination, direction });
-//   }
-
-//   render() {
-//     const { fullpages } = this.state;
-
-//     if (!fullpages.length) {
-//       return null;
-//     }
-
-//     return (
-//       <>
-//         <ToastContainer />
-//         <Navmenu />
-//         <ReactFullpage
-//           debug
-//           pluginWrapper={() => {
-//           }}
-//           licenseKey={'YOUR_KEY_HERE'}
-//           navigation
-//           anchors={['firstPage', 'secondPage', 'thirdPage']}
-//           sectionSelector={SECTION_SEL}
-//           onLeave={this.onLeave.bind(this)}
-//           sectionsColor={this.state.sectionsColor}
-//           render={(comp) => (
-//             <ReactFullpage.Wrapper>
-//               {fullpages.map(({ text, description }, index) => (
-//                 <div key={text} className={SEL}>
-//                   {index === 1 ? (
-//                     <>
-//                       {projectData.map((project) => (
-//                         <Projectcontainer className="slide">
-//                           <Projectcard project={project} />
-//                         </Projectcontainer>
-//                       ))}
-//                     </>
-//                   ) : index === 2 ? (
-//                     <Projectcontainer className="slide">
-//                       <Contactcard />
-//                     </Projectcontainer>
-//                   ) : (
-//                     <div className="slide">
-//                       <h3>{text}</h3>
-//                       {description && <h4>{description}</h4>}
-//                       <Socialscontainer>
-//                         <Socials />
-//                       </Socialscontainer>
-//                       <Scrolldownarrow />
-//                     </div>
-//                   )}
-//                 </div>
-//               ))}
-//             </ReactFullpage.Wrapper>
-//           )}
-//         />
-//       </>
-//     );
-//   }
-// }
-
-// export default App;

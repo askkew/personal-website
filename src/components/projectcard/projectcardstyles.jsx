@@ -79,6 +79,9 @@ export const ProjectText = styled('h1')({
   '@media (max-width: 768px)': {
     fontSize: '1.3rem',
   },
+  '@media (max-width: 468px)': {
+    fontSize: '0.9rem',
+  },
 })
 
 export const ProjectDesc = styled('h1')({
@@ -86,12 +89,18 @@ export const ProjectDesc = styled('h1')({
   '@media (max-width: 768px)': {
     fontSize: '0.9rem',
   },
+  '@media (max-width: 468px)': {
+    fontSize: '0.6rem',
+  },
 })
 
 export const ProjectTag = styled('h1')({
   fontSize: '1.2rem',
   '@media (max-width: 768px)': {
     fontSize: '0.9rem',
+  },
+  '@media (max-width: 468px)': {
+    fontSize: '0.6rem',
   },
 })
 
