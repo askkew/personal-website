@@ -54,7 +54,7 @@ const Navmenu = () => {
     <Navmenucontainer>
       <li style={{listStyle: 'none'}} data-menuanchor="firstPage" class="active"><Navmenuitem href="#firstPage">about</Navmenuitem></li>
       <li style={{listStyle: 'none'}} data-menuanchor="secondPage"><Navmenuitem href="#secondPage">work</Navmenuitem></li>
-      <li style={{listStyle: 'none'}} data-menuanchor="thirdPage"><Navmenuitem href="#thirdPage">contact</Navmenuitem></li>
+      <li style={{listStyle: 'none'}} data-menuanchor="fourthPage"><Navmenuitem href="#fourthPage">contact</Navmenuitem></li>
       <Socialscontainer>
         <Socials />
       </Socialscontainer>

@@ -97,7 +97,7 @@ class App extends React.Component {
           pluginWrapper={() => {}}
           licenseKey={'YOUR_KEY_HERE'}
           navigation
-          anchors={['firstPage', 'secondPage', 'thirdPage', 'fourthpage']}
+          anchors={['firstPage', 'secondPage', 'thirdPage', 'fourthPage']}
           sectionSelector={SECTION_SEL}
           onLeave={this.onLeave.bind(this)}
           sectionsColor={this.state.sectionsColor}

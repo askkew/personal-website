@@ -94,7 +94,11 @@ export const ProjectDesc = styled('h1')({
   },
 })
 
-export const ProjectTag = styled('h1')({
+export const ProjectTag = styled('span')({
+  // backgroundColor: 'rgba(92, 92, 92)',
+  // width: 'auto',
+  // display: 'inline-block',
+  margin: 4,
   fontSize: '1.2rem',
   '@media (max-width: 768px)': {
     fontSize: '0.9rem',
@@ -105,10 +109,9 @@ export const ProjectTag = styled('h1')({
 })
 
 export const TagsContainer = styled('div')({
-  // backgroundColor: 'rgba(92, 92, 92)',
-  // display: 'inline-block',
-  // padding: 10,
-  // display: 'flex',
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100%',
 })
 
 export const GithubIconCustom = styled(LuGithub)({
@@ -131,4 +134,12 @@ export const LinkIconCustom = styled(BiLinkExternal)({
   '@media (max-width: 568px)': {
     fontSize: '1.2rem',
   }
+})
+
+export const TagItemContainer = styled('div')({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'center',
+  margin: 4,
 })

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { LinkIconCustom, GithubIconCustom, HoverTextContainer, ProjectText, ProjectDesc, ProjectTag, TagsContainer, HoverContent, Textcontainer, DropdownContent, Projectcardcontainer, Projectimagewrapper, Bannertitlecontainer, Socialbuttoncontainer, Projectcardbanner, Projectcardimageconatiner, Projectcardbannertitle } from "./projectcardstyles.jsx"
+import { TagItemContainer, LinkIconCustom, GithubIconCustom, HoverTextContainer, ProjectText, ProjectDesc, ProjectTag, TagsContainer, HoverContent, Textcontainer, DropdownContent, Projectcardcontainer, Projectimagewrapper, Bannertitlecontainer, Socialbuttoncontainer, Projectcardbanner, Projectcardimageconatiner, Projectcardbannertitle } from "./projectcardstyles.jsx"
 import { BiLinkExternal } from 'react-icons/bi';
 import { LuGithub } from 'react-icons/lu';
 import styled from 'styled-components';
@@ -66,8 +66,10 @@ const Projectcard = ({project}) => {
             <TagsContainer>
             {tempTags.map(tag => {
               return (
-                // <ProjectTag style={{color: `${tag.color}`}}>{tag.name}</ProjectTag>
-                <ProjectTag style={{color: 'gainsboro'}}>{tag.name}</ProjectTag>
+                <TagItemContainer>
+                  <img src={tag.icon} style={{width: '1.75rem',}}/>
+                  <ProjectTag style={{color: 'gainsboro'}}>{tag.name}</ProjectTag>
+                </TagItemContainer>
               )
             })}
             </TagsContainer>

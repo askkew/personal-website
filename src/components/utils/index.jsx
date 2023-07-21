@@ -8,6 +8,25 @@ import medpluspicture from "./assets/medplusnew.png"
 import techlitepicture from "./assets/techlitenew.png"
 import critart from './assets/critart.png'
 import d2raidtoolpicture from './assets/d2raidtoolfinal.png'
+import angular from './assets/angular.png'
+import react from './assets/reactjs.png'
+import nodejs from './assets/nodejs.png'
+import typescript from './assets/typescript.png'
+import javascript from './assets/javascript.png'
+import mongodb from './assets/mongodb.png'
+import mysql from './assets/sql.png'
+import php from './assets/php.png'
+import css from './assets/css.png'
+import html from './assets/html.png'
+import java from './assets/java.png'
+import basic from './assets/default.png'
+import sqlserver from './assets/sqlserver.png'
+import aws from './assets/aws.png'
+import swift from './assets/swift.png'
+import swiftui from './assets/swiftui.png'
+import emailjs from './assets/emailjs.png'
+import restapi from './assets/restapi.png'
+
 
 export const darkText = '#22223B'
 export const lightText = '#4A4E69'
@@ -31,19 +50,19 @@ export const projectData = [
     tags: [
       {
         name: "react",
-        color: firstTag,
+        icon: react,
       },
       {
         name: "typescript",
-        color: secondTag,
+        icon: typescript,
       },
       {
         name: "nodejs",
-        color: thirdTag,
+        icon: nodejs,
       },
       {
         name: "re-charts",
-        color: thirdTag,
+        icon: basic,
       },
     ],
   },
@@ -57,19 +76,19 @@ export const projectData = [
     tags: [
       {
         name: "react-native",
-        color: firstTag,
+        icon: react,
       },
       {
         name: "typescript",
-        color: secondTag,
+        icon: typescript,
       },
       {
         name: "nodejs",
-        color: thirdTag,
+        icon: nodejs,
       },
       {
         name: "RESTful API",
-        color: thirdTag,
+        icon: restapi,
       },
     ],
   },
@@ -83,19 +102,19 @@ export const projectData = [
     tags: [
       {
         name: "ReactJS",
-        color: firstTag,
+        icon: react,
       },
       {
         name: "typescript",
-        color: secondTag,
+        icon: typescript,
       },
       {
         name: "nodejs",
-        color: thirdTag,
+        icon: nodejs,
       },
       {
         name: "javascript",
-        color: fourthTag,
+        icon: javascript,
       },
     ],
   },
@@ -109,11 +128,11 @@ export const projectData = [
     tags: [
       {
         name: "Swift",
-        color: firstTag,
+        icon: swift,
       },
       {
         name: "SwiftUI",
-        color: secondTag,
+        icon: swiftui,
       },
     ],
   },
@@ -127,19 +146,19 @@ export const projectData = [
     tags: [
       {
         name: "react",
-        color: firstTag,
+        icon: react,
       },
       {
         name: "typescript",
-        color: secondTag,
+        icon: typescript,
       },
       {
         name: "nodejs",
-        color: thirdTag,
+        icon: nodejs,
       },
       {
         name: "mongodb",
-        color: fourthTag,
+        icon: mongodb,
       },
     ],
   },
@@ -152,19 +171,19 @@ export const projectData = [
     tags: [
       {
         name: "javascript",
-        color: firstTag,
+        icon: javascript,
       },
       {
         name: "php",
-        color: secondTag,
+        icon: php,
       },
       {
         name: "css",
-        color: thirdTag,
+        icon: css,
       },
       {
         name: "mysql",
-        color: fourthTag,
+        icon: mysql,
       },
     ],
   },
@@ -181,19 +200,19 @@ export const workData = [
     tags: [
       {
         name: "react",
-        color: firstTag,
+        icon: react,
       },
       {
         name: "typescript",
-        color: secondTag,
+        icon: typescript,
       },
       {
         name: "emailjs",
-        color: thirdTag,
+        icon: emailjs,
       },
       {
         name: "react-parallax",
-        color: thirdTag,
+        icon: basic,
       },
     ],
   },
@@ -206,23 +225,23 @@ export const workData = [
     tags: [
       {
         name: "react",
-        color: firstTag,
+        icon: react,
       },
       {
         name: "typescript",
-        color: secondTag,
+        icon: typescript,
       },
       {
         name: "emailjs",
-        color: thirdTag,
+        icon: emailjs,
       },
       {
         name: "SQL Server",
-        color: thirdTag,
+        icon: sqlserver,
       },
       {
         name: "AWS",
-        color: thirdTag,
+        icon: aws,
       },
     ],
   },
@@ -236,15 +255,15 @@ export const workData = [
     tags: [
       {
         name: "react",
-        color: firstTag,
+        icon: react,
       },
       {
         name: "typescript",
-        color: secondTag,
+        icon: typescript,
       },
       {
         name: "emailjs",
-        color: thirdTag,
+        icon: emailjs,
       },
     ],
   },
