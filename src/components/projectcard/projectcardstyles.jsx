@@ -68,6 +68,10 @@ export const Bannertitlecontainer = styled('div')({
 })
 
 export const HoverTextContainer = styled('div')({
+  // display: 'flex',
+  // flexDirection: 'column',
+  // justifyContent: 'center',
+  // alignItems: 'center',
   width: '60%',
   '@media (max-width: 768px)': {
     width: '90%',

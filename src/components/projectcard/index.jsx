@@ -4,6 +4,7 @@ import { TagItemContainer, LinkIconCustom, GithubIconCustom, HoverTextContainer,
 import { BiLinkExternal } from 'react-icons/bi';
 import { LuGithub } from 'react-icons/lu';
 import styled from 'styled-components';
+import { RevealComponent } from '../reveal/index.jsx';
 
 const CardContainer = styled.div`
   position: relative;
@@ -59,22 +60,26 @@ const Projectcard = ({project}) => {
       </Projectcardbanner>
       <CardContainer style={{ backgroundColor: 'black' }}>
         <CardImage src={project.image} alt="Card Background" />
-        <CardText>
-          <HoverTextContainer>
-            <ProjectText>{project.title}</ProjectText>
-            <ProjectDesc>{project.description}</ProjectDesc>
-            <TagsContainer>
-            {tempTags.map(tag => {
-              return (
-                <TagItemContainer>
-                  <img src={tag.icon} style={{width: '1.75rem',}}/>
-                  <ProjectTag style={{color: 'gainsboro'}}>{tag.name}</ProjectTag>
-                </TagItemContainer>
-              )
-            })}
-            </TagsContainer>
-          </HoverTextContainer>
-        </CardText>
+          <CardText>
+            <HoverTextContainer>
+              <RevealComponent>
+              <div>
+                <ProjectText>{project.title}</ProjectText>
+                <ProjectDesc>{project.description}</ProjectDesc>
+                <TagsContainer>
+                {tempTags.map(tag => {
+                  return (
+                    <TagItemContainer>
+                      <img src={tag.icon} style={{width: '1.75rem',}}/>
+                      <ProjectTag style={{color: 'gainsboro'}}>{tag.name}</ProjectTag>
+                    </TagItemContainer>
+                  )
+                })}
+                </TagsContainer>
+              </div>
+              </RevealComponent>
+            </HoverTextContainer>
+          </CardText>
       </CardContainer>
     </Projectcardcontainer>
   )

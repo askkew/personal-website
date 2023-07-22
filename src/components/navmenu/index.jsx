@@ -6,6 +6,7 @@ import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import { darkText } from '../utils/index.jsx';
 import styled from '@emotion/styled';
+import { RevealComponent } from '../reveal/index.jsx';
 
 const Socialscontainer = styled('div')({
   '@media (max-width: 768px)': {
@@ -52,11 +53,19 @@ const Navmenu = () => {
 
   return (
     <Navmenucontainer>
-      <li style={{listStyle: 'none'}} data-menuanchor="firstPage" class="active"><Navmenuitem href="#firstPage">about</Navmenuitem></li>
+      <RevealComponent>
+        <li style={{listStyle: 'none'}} data-menuanchor="firstPage" class="active"><Navmenuitem href="#firstPage">about</Navmenuitem></li>
+      </RevealComponent>
+      <RevealComponent>
       <li style={{listStyle: 'none'}} data-menuanchor="secondPage"><Navmenuitem href="#secondPage">work</Navmenuitem></li>
+      </RevealComponent>
+      <RevealComponent>
       <li style={{listStyle: 'none'}} data-menuanchor="fourthPage"><Navmenuitem href="#fourthPage">contact</Navmenuitem></li>
+      </RevealComponent>
       <Socialscontainer>
-        <Socials />
+        <RevealComponent>
+          <Socials />
+        </RevealComponent>
       </Socialscontainer>
     </Navmenucontainer>
   )

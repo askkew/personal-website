@@ -7,6 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import { useRef } from "react";
 import { useState } from 'react';
+import { RevealComponent } from '../reveal/index.jsx';
+import { ContactReveal } from '../contactreveal/index.jsx';
 
 
 const customTheme = (outerTheme) =>
@@ -84,7 +86,7 @@ const Contactcard = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
+        theme: "light",
       });
       return;
     }
@@ -106,7 +108,7 @@ const Contactcard = () => {
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-              theme: "dark",
+              theme: "light",
             });
           },
           (error) => {
@@ -119,7 +121,7 @@ const Contactcard = () => {
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-              theme: "dark",
+              theme: "light",
             });
           }
         );
@@ -142,33 +144,43 @@ const Contactcard = () => {
   return (
     <Contactcardcontainer>
       <StyledFormControl ref={form}>
-        <Contacttitle>Contact me!</Contacttitle>
+        <RevealComponent>
+          <Contacttitle>Contact me!</Contacttitle>
+        </RevealComponent>
         <ThemeProvider theme={customTheme(outerTheme)}>
-          <Customtextfield
-          variant="filled"
-          id="mui-theme-provider-filled-input"
-          label="Name"
-          value={name}
-          onChange={handleNameChange}
-          />
-          <Customtextfield
-          variant="filled"
-          id="mui-theme-provider-filled-input"
-          label="Email"
-          value={email}
-          onChange={handleEmailChange}
-          />
-          <Customtextfield
-          variant="filled"
-          id="filled-multiline-static"
-          label="Message"
-          multiline
-          rows={7}
-          style={{width: '70%', backgroundColor: 'gainsboro'}}
-          value={message}
-          onChange={handleMessageChange}
-          />
-          <StyledButton onClick={sendEmail} disabled={!isFormValid}>Send</StyledButton>
+          <ContactReveal>
+            <Customtextfield
+            variant="filled"
+            id="mui-theme-provider-filled-input"
+            label="Name"
+            value={name}
+            onChange={handleNameChange}
+            />
+          </ContactReveal>
+          <ContactReveal>
+            <Customtextfield
+            variant="filled"
+            id="mui-theme-provider-filled-input"
+            label="Email"
+            value={email}
+            onChange={handleEmailChange}
+            />
+          </ContactReveal>
+          <ContactReveal>
+            <Customtextfield
+            variant="filled"
+            id="filled-multiline-static"
+            label="Message"
+            multiline
+            rows={7}
+            style={{width: '70%', backgroundColor: 'gainsboro'}}
+            value={message}
+            onChange={handleMessageChange}
+            />
+          </ContactReveal>
+          <ContactReveal style={{}}>
+            <StyledButton onClick={sendEmail} disabled={!isFormValid}>Send</StyledButton>
+          </ContactReveal>
         </ThemeProvider>
       </StyledFormControl>
     </Contactcardcontainer>

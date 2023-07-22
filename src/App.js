@@ -11,6 +11,7 @@ import Contactcard from './components/contactcard';
 import { ToastContainer } from 'react-toastify';
 import { Socials } from './components/navmenu';
 import { Refreshcontainer } from './components/navmenu/navmenustyles.jsx';
+import { RevealComponent } from './components/reveal';
 
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
@@ -129,10 +130,16 @@ class App extends React.Component {
                     </Projectcontainer>
                   ) : (
                     <div className="slide">
-                      <h3>{text}</h3>
-                      {description && <h4>{description}</h4>}
+                      <RevealComponent>
+                        <div>
+                          <h3>{text}</h3>
+                          {description && <h4>{description}</h4>}
+                        </div>
+                      </RevealComponent>
                       <Socialscontainer>
-                        <Socials />
+                        <RevealComponent>
+                          <Socials />
+                        </RevealComponent>
                       </Socialscontainer>
                       <Scrolldownarrow />
                     </div>
