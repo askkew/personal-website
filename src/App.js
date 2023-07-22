@@ -12,6 +12,8 @@ import { ToastContainer } from 'react-toastify';
 import { Socials } from './components/navmenu';
 import { Refreshcontainer } from './components/navmenu/navmenustyles.jsx';
 import { RevealComponent } from './components/reveal';
+import { OneNavReveal } from './components/onenavreveal';
+import { TwoNavReveal } from './components/twonavreveal';
 
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
@@ -131,15 +133,15 @@ class App extends React.Component {
                   ) : (
                     <div className="slide">
                       <RevealComponent>
-                        <div>
-                          <h3>{text}</h3>
-                          {description && <h4>{description}</h4>}
-                        </div>
+                        <h3>{text}</h3>
                       </RevealComponent>
+                      <OneNavReveal>
+                        {description && <h4>{description}</h4>}
+                      </OneNavReveal>
                       <Socialscontainer>
-                        <RevealComponent>
+                        <TwoNavReveal>
                           <Socials />
-                        </RevealComponent>
+                        </TwoNavReveal>
                       </Socialscontainer>
                       <Scrolldownarrow />
                     </div>

@@ -166,7 +166,7 @@ export const projectData = [
     title: "Techlite",
     description: "Techlite is an E-commerce website built on the LAMP stack and designed by a team of students as a term project.",
     githublink: "https://github.com/Scrub-Sauce/Scared2Compile",
-    link: "https://github.com/Scrub-Sauce/Scared2Compile",
+    // link: "https://github.com/Scrub-Sauce/Scared2Compile",
     image: techlitepicture,
     tags: [
       {
@@ -193,7 +193,7 @@ export const workData = [
   {
     title: "Crit Art Consulting",
     description: "Art website for Monica Medellin and her business in art consulting to help students compete at the Houston Rodeo Art Auction, this website is meant to attract more clients and customers for this service.",
-    githublink: "https://github.com/askkew/monica-site",
+    // githublink: "https://github.com/askkew/monica-site",
     link: "https://critartconsulting.com/",
     image: critart,
     imagesize: 200,
@@ -219,7 +219,7 @@ export const workData = [
   {
     title: "TDSC",
     description: "TDSC is a shooting club operated out of Houston Texas that brings together gun enthusiasts for self defense classes and range days. The scope of this project included a complete rework and redesign of their website as well as the implementation of an emailing service. Furthermore, I built a database and admin dashboard to store subscribers and donations for alerts.",
-    githublink: "https://github.com/snyperifle/TDSC",
+    // githublink: "https://github.com/snyperifle/TDSC",
     link: "https://tdscbeta.netlify.app/",
     image: tdscpicture,
     tags: [
@@ -248,7 +248,7 @@ export const workData = [
   {
     title: "MedPLUS - WIP",
     description: "MedPLUS specializes in providing innovative and comprehensive medical professional liability insurance products through financially secure, A.M. Best Rated insurance carriers.",
-    githublink: "https://github.com/snyperifle/medPlus",
+    // githublink: "https://github.com/snyperifle/medPlus",
     link: "https://snyperifle.github.io/medPlus/",
     image: medpluspicture,
     imageSize: 50,

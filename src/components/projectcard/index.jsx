@@ -51,8 +51,8 @@ const Projectcard = ({project}) => {
     <Projectcardcontainer>
       <Projectcardbanner>
         <Socialbuttoncontainer>
-          <a href={project.link} target="_blank"><LinkIconCustom name="launch"/></a>
-          <a href={project.githublink} target="_blank"><GithubIconCustom name="github"/></a>
+        {project.link ? ( <a href={project.link} target="_blank"><LinkIconCustom name="launch"/></a> ) : <span>test</span>}
+        {project.githublink ? ( <a href={project.githublink} target="_blank"><GithubIconCustom name="github"/></a> ) : null}
         </Socialbuttoncontainer>
         <Bannertitlecontainer>
           <Projectcardbannertitle>{project.title}</Projectcardbannertitle>

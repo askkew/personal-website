@@ -7,6 +7,9 @@ import RefreshIcon from '@mui/icons-material/Refresh';
 import { darkText } from '../utils/index.jsx';
 import styled from '@emotion/styled';
 import { RevealComponent } from '../reveal/index.jsx';
+import { OneNavReveal } from '../onenavreveal/index.jsx';
+import { TwoNavReveal } from '../twonavreveal/index.jsx';
+import { ThreeNavReveal } from '../threenavreveal/index.jsx';
 
 const Socialscontainer = styled('div')({
   '@media (max-width: 768px)': {
@@ -56,16 +59,16 @@ const Navmenu = () => {
       <RevealComponent>
         <li style={{listStyle: 'none'}} data-menuanchor="firstPage" class="active"><Navmenuitem href="#firstPage">about</Navmenuitem></li>
       </RevealComponent>
-      <RevealComponent>
+      <OneNavReveal>
       <li style={{listStyle: 'none'}} data-menuanchor="secondPage"><Navmenuitem href="#secondPage">work</Navmenuitem></li>
-      </RevealComponent>
-      <RevealComponent>
+      </OneNavReveal>
+      <TwoNavReveal>
       <li style={{listStyle: 'none'}} data-menuanchor="fourthPage"><Navmenuitem href="#fourthPage">contact</Navmenuitem></li>
-      </RevealComponent>
+      </TwoNavReveal>
       <Socialscontainer>
-        <RevealComponent>
+        <ThreeNavReveal>
           <Socials />
-        </RevealComponent>
+        </ThreeNavReveal>
       </Socialscontainer>
     </Navmenucontainer>
   )

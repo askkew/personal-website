@@ -10,7 +10,6 @@ import { useState } from 'react';
 import { RevealComponent } from '../reveal/index.jsx';
 import { ContactReveal } from '../contactreveal/index.jsx';
 
-
 const customTheme = (outerTheme) =>
   createTheme({
     palette: {
