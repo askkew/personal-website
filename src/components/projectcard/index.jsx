@@ -18,6 +18,10 @@ const CardImage = styled.img`
   height: 100%;
   object-fit: cover;
   transition: opacity 0.3s;
+  ${CardContainer}:hover & {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  };
 `;
 
 const CardText = styled.div`
@@ -51,7 +55,7 @@ const Projectcard = ({project}) => {
     <Projectcardcontainer>
       <Projectcardbanner>
         <Socialbuttoncontainer>
-        {project.link ? ( <a href={project.link} target="_blank"><LinkIconCustom name="launch"/></a> ) : <span>test</span>}
+        {project.link ? ( <a href={project.link} target="_blank"><LinkIconCustom name="launch"/></a> ) : null}
         {project.githublink ? ( <a href={project.githublink} target="_blank"><GithubIconCustom name="github"/></a> ) : null}
         </Socialbuttoncontainer>
         <Bannertitlecontainer>
@@ -59,7 +63,13 @@ const Projectcard = ({project}) => {
         </Bannertitlecontainer>
       </Projectcardbanner>
       <CardContainer style={{ backgroundColor: 'black' }}>
-        <CardImage src={project.image} alt="Card Background" />
+        <CardImage
+        style={{
+          width: `${project.imagesize}`
+        }}
+        src={project.image}
+        alt="Card Background"
+        />
           <CardText>
             <HoverTextContainer>
               <RevealComponent>

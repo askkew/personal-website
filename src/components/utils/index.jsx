@@ -46,7 +46,7 @@ export const projectData = [
     githublink: "https://github.com/askkew/Silver-Armory",
     link: "https://silver-armory.netlify.app/",
     image: silverpicture,
-    imagesize: 200,
+    imagesize: '100%',
     tags: [
       {
         name: "react",
@@ -72,7 +72,7 @@ export const projectData = [
     githublink: "https://github.com/askkew/d2-raid-tool",
     link: "https://github.com/askkew/d2-raid-tool",
     image: d2raidtoolpicture,
-    imagesize: 200,
+    imagesize: '100%',
     tags: [
       {
         name: "react-native",
@@ -98,7 +98,7 @@ export const projectData = [
     githublink: "https://github.com/askkew/destiny-search-engine",
     // link: "https://github.com/askkew/destiny-search-engine",
     image: d2itemsmobile,
-    imagesize: 200,
+    imagesize: '60%',
     tags: [
       {
         name: "ReactJS",
@@ -124,7 +124,7 @@ export const projectData = [
     githublink: "https://github.com/askkew/swift-weather-app",
     // link: "https://github.com/askkew/WeatherApp",
     image: weathertestswift,
-    imagesize: 200,
+    imagesize: '60%',
     tags: [
       {
         name: "Swift",
@@ -142,7 +142,7 @@ export const projectData = [
     githublink: "https://github.com/askkew/WeatherApp",
     link: "https://github.com/askkew/WeatherApp",
     image: weathertestreact,
-    imagesize: 200,
+    imagesize: '60%',
     tags: [
       {
         name: "react",
@@ -168,6 +168,7 @@ export const projectData = [
     githublink: "https://github.com/Scrub-Sauce/Scared2Compile",
     // link: "https://github.com/Scrub-Sauce/Scared2Compile",
     image: techlitepicture,
+    imagesize: '100%',
     tags: [
       {
         name: "javascript",
@@ -196,7 +197,7 @@ export const workData = [
     // githublink: "https://github.com/askkew/monica-site",
     link: "https://critartconsulting.com/",
     image: critart,
-    imagesize: 200,
+    imagesize: '100%',
     tags: [
       {
         name: "react",
@@ -222,6 +223,7 @@ export const workData = [
     // githublink: "https://github.com/snyperifle/TDSC",
     link: "https://tdscbeta.netlify.app/",
     image: tdscpicture,
+    imagesize: '100%',
     tags: [
       {
         name: "react",
@@ -251,7 +253,7 @@ export const workData = [
     // githublink: "https://github.com/snyperifle/medPlus",
     link: "https://snyperifle.github.io/medPlus/",
     image: medpluspicture,
-    imageSize: 50,
+    imagesize: '100%',
     tags: [
       {
         name: "react",
