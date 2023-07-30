@@ -70,7 +70,7 @@ export const projectData = [
     title: "D2 Raid Tool",
     description: "D2 Raid Tool is a react-native app that allows users to login via Bungie OAuth2.0 and move items around their inventories quickly during a Raid when time is valuable.",
     githublink: "https://github.com/askkew/d2-raid-tool",
-    link: "https://github.com/askkew/d2-raid-tool",
+    // link: "https://github.com/askkew/d2-raid-tool",
     image: d2raidtoolpicture,
     imagesize: '100%',
     tags: [
@@ -140,7 +140,7 @@ export const projectData = [
     title: "ReactJS Weather app",
     description: "This is a basic ReactJS application that allows users to get the current weather details as well as the following 6 day forecast for any city.",
     githublink: "https://github.com/askkew/WeatherApp",
-    link: "https://github.com/askkew/WeatherApp",
+    // link: "https://github.com/askkew/WeatherApp",
     image: weathertestreact,
     imagesize: '60%',
     tags: [
