@@ -9,6 +9,7 @@ import { OneNavReveal } from '../onenavreveal/index.jsx';
 import { TwoNavReveal } from '../twonavreveal/index.jsx';
 import { ThreeNavReveal } from '../threenavreveal/index.jsx';
 import { FourNavReveal } from '../fournavreveal/index.jsx';
+import { Hoveranimation } from '../hoveranimation/index.jsx';
 
 const CardContainer = styled.div`
   position: relative;
@@ -58,8 +59,22 @@ const Projectcard = ({project}) => {
     <Projectcardcontainer>
       <Projectcardbanner>
         <Socialbuttoncontainer>
-        {project.link ? ( <a href={project.link} target="_blank"><LinkIconCustom name="launch"/></a> ) : null}
-        {project.githublink ? ( <a href={project.githublink} target="_blank"><GithubIconCustom name="github"/></a> ) : null}
+        {project.link ? ( 
+          <Hoveranimation>
+            <a href={project.link} target="_blank">
+              <LinkIconCustom name="launch"/>
+            </a>
+          </Hoveranimation>
+          )
+        : null}
+        {project.githublink ? ( 
+          <Hoveranimation>
+            <a href={project.githublink} target="_blank">
+              <GithubIconCustom name="github"/>
+            </a>
+          </Hoveranimation>
+          )
+        : null}
         </Socialbuttoncontainer>
         <Bannertitlecontainer>
           <Projectcardbannertitle>{project.title}</Projectcardbannertitle>

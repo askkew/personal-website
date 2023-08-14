@@ -10,6 +10,7 @@ import { RevealComponent } from '../reveal/index.jsx';
 import { OneNavReveal } from '../onenavreveal/index.jsx';
 import { TwoNavReveal } from '../twonavreveal/index.jsx';
 import { ThreeNavReveal } from '../threenavreveal/index.jsx';
+import { Hoveranimation } from '../hoveranimation/index.jsx';
 
 const Socialscontainer = styled('div')({
   '@media (max-width: 768px)': {
@@ -19,24 +20,30 @@ const Socialscontainer = styled('div')({
 
 export const Socials = () => {
   return (
-    <>
-      <Socialicon title="Github" href="https://github.com/askkew">
-        <GitHubIcon
-        style={{
-          fontSize: '1.8rem',
-          '@media (max-width: 768px)': {
-            fontSize: '5rem',
-          },
-        }}
-        />
-      </Socialicon>
-      <Socialicon title="Linkedin" href="https://www.linkedin.com/in/luke-overbey-37b342235/">
-        <LinkedInIcon style={{fontSize: '1.8rem'}} />
-      </Socialicon>
-      <Socialicon title="Resume" href="https://docs.google.com/document/d/e/2PACX-1vQpwQ8amWNrQpnltl0WjlXrlbzYVa4AUuUDClur4gdqZpyD6g1nbTIvy_1ezU5wmdr-QPP_9yYF8WT-/pub">
-        <AssignmentIndIcon style={{fontSize: '1.8rem'}} />
-      </Socialicon>
-    </>
+    <div style={{display: 'flex', flexDirection: 'row'}}>
+      <Hoveranimation>
+        <Socialicon title="Github" href="https://github.com/askkew">
+          <GitHubIcon
+          style={{
+            fontSize: '1.8rem',
+            '@media (max-width: 768px)': {
+              fontSize: '5rem',
+            },
+          }}
+          />
+        </Socialicon>
+      </Hoveranimation>
+      <Hoveranimation>
+        <Socialicon title="Linkedin" href="https://www.linkedin.com/in/luke-overbey-37b342235/">
+          <LinkedInIcon style={{fontSize: '1.8rem'}} />
+        </Socialicon>
+      </Hoveranimation>
+      <Hoveranimation>
+        <Socialicon title="Resume" href="https://docs.google.com/document/d/e/2PACX-1vQpwQ8amWNrQpnltl0WjlXrlbzYVa4AUuUDClur4gdqZpyD6g1nbTIvy_1ezU5wmdr-QPP_9yYF8WT-/pub">
+          <AssignmentIndIcon style={{fontSize: '1.8rem'}} />
+        </Socialicon>
+      </Hoveranimation>
+    </div>
   )
 }
 
