@@ -26,6 +26,7 @@ import swift from './assets/swift.png'
 import swiftui from './assets/swiftui.png'
 import emailjs from './assets/emailjs.png'
 import restapi from './assets/restapi.png'
+import sqlite from './assets/sqlite.png'
 
 
 export const darkText = '#22223B'
@@ -192,6 +193,32 @@ export const projectData = [
 
 export const workData = [
   {
+    title: "TDSC",
+    description: "TDSC is a shooting club operated out of Houston Texas that brings together gun enthusiasts for self defense classes and range days. The scope of this project included a complete rework and redesign of their website as well as the implementation of an emailing service. Furthermore, I built a database and admin dashboard to store subscribers and donations for alerts.",
+    // githublink: "https://github.com/snyperifle/TDSC",
+    link: "https://tdscbeta.netlify.app/",
+    image: tdscpicture,
+    imagesize: '100%',
+    tags: [
+      {
+        name: "react",
+        icon: react,
+      },
+      {
+        name: "typescript",
+        icon: typescript,
+      },
+      {
+        name: "SQLite",
+        icon: sqlite,
+      },
+      {
+        name: "AWS",
+        icon: aws,
+      },
+    ],
+  },
+  {
     title: "Crit Art Consulting",
     description: "Art website for Monica Medellin and her business in art consulting to help students compete at the Houston Rodeo Art Auction, this website is meant to attract more clients and customers for this service.",
     // githublink: "https://github.com/askkew/monica-site",
@@ -214,36 +241,6 @@ export const workData = [
       {
         name: "react-parallax",
         icon: basic,
-      },
-    ],
-  },
-  {
-    title: "TDSC",
-    description: "TDSC is a shooting club operated out of Houston Texas that brings together gun enthusiasts for self defense classes and range days. The scope of this project included a complete rework and redesign of their website as well as the implementation of an emailing service. Furthermore, I built a database and admin dashboard to store subscribers and donations for alerts.",
-    // githublink: "https://github.com/snyperifle/TDSC",
-    link: "https://tdscbeta.netlify.app/",
-    image: tdscpicture,
-    imagesize: '100%',
-    tags: [
-      {
-        name: "react",
-        icon: react,
-      },
-      {
-        name: "typescript",
-        icon: typescript,
-      },
-      {
-        name: "emailjs",
-        icon: emailjs,
-      },
-      {
-        name: "SQL Server",
-        icon: sqlserver,
-      },
-      {
-        name: "AWS",
-        icon: aws,
       },
     ],
   },

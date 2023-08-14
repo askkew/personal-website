@@ -12,7 +12,7 @@ export const Projectcardcontainer = styled('div')({
   height: 'clamp(175px, 65vh, 850px)',
   border: '8px solid #eaeaea',
   '@media (max-width: 768px)': {
-    height: 'clamp(175px, 65vh, 300px)',
+    height: 'clamp(175px, 65vh, 400px)',
   },
 })
 

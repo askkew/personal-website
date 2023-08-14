@@ -5,6 +5,10 @@ import { BiLinkExternal } from 'react-icons/bi';
 import { LuGithub } from 'react-icons/lu';
 import styled from 'styled-components';
 import { RevealComponent } from '../reveal/index.jsx';
+import { OneNavReveal } from '../onenavreveal/index.jsx';
+import { TwoNavReveal } from '../twonavreveal/index.jsx';
+import { ThreeNavReveal } from '../threenavreveal/index.jsx';
+import { FourNavReveal } from '../fournavreveal/index.jsx';
 
 const CardContainer = styled.div`
   position: relative;
@@ -76,14 +80,45 @@ const Projectcard = ({project}) => {
                 <ProjectText>{project.title}</ProjectText>
                 <ProjectDesc>{project.description}</ProjectDesc>
                 <TagsContainer>
-                {tempTags.map(tag => {
-                  return (
-                    <TagItemContainer>
-                      <img src={tag.icon} style={{width: '1.75rem',}}/>
-                      <ProjectTag style={{color: 'gainsboro'}}>{tag.name}</ProjectTag>
-                    </TagItemContainer>
-                  )
-                })}
+                  {tempTags.map((tag, index) => {
+                    if (index === 0) {
+                      return (
+                        <OneNavReveal>
+                          <TagItemContainer key={index}>
+                            <img src={tag.icon} style={{ width: '1.75rem' }} alt={tag.name} />
+                            <ProjectTag style={{ color: 'gainsboro' }}>{tag.name}</ProjectTag>
+                          </TagItemContainer>
+                        </OneNavReveal>
+                      );
+                    } else if (index === 1) {
+                      return (
+                        <TwoNavReveal>
+                          <TagItemContainer key={index}>
+                            <img src={tag.icon} style={{ width: '1.75rem' }} alt={tag.name} />
+                            <ProjectTag style={{ color: 'gainsboro' }}>{tag.name}</ProjectTag>
+                          </TagItemContainer>
+                        </TwoNavReveal>
+                      );
+                    } else if (index === 2) {
+                      return (
+                        <ThreeNavReveal>
+                          <TagItemContainer key={index}>
+                            <img src={tag.icon} style={{ width: '1.75rem' }} alt={tag.name} />
+                            <ProjectTag style={{ color: 'gainsboro' }}>{tag.name}</ProjectTag>
+                          </TagItemContainer>
+                        </ThreeNavReveal>
+                      );
+                    } else if (index === 3) {
+                      return (
+                        <FourNavReveal>
+                          <TagItemContainer key={index}>
+                            <img src={tag.icon} style={{ width: '1.75rem' }} alt={tag.name} />
+                            <ProjectTag style={{ color: 'gainsboro' }}>{tag.name}</ProjectTag>
+                          </TagItemContainer>
+                        </FourNavReveal>
+                      );
+                    }
+                  })}
                 </TagsContainer>
               </div>
               </RevealComponent>
