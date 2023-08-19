@@ -90,8 +90,6 @@ const Contactcard = () => {
       return;
     }
 
-    console.log({ service, template, user });
-
     if (form.current) {
       emailjs
         .sendForm(service || "", template || "", form.current, user)
